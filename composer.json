@@ -11,6 +11,14 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ci4adminrbac\\": "src"
+        }
+    },
+    "require-dev": {
+        "codeigniter4/framework": "dev-master"
     }
 }
