@@ -1,27 +1,34 @@
 {
-    "name": "skuadron45/ci4adminrbac",
-    "description": "Codeigniter 4 Admin module With Basic RBAC",
-    "type": "library",
-    "license": "MIT",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "authors": [
-        {
-            "name": "skuadron45",
-            "email": "zahidalharis@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=7.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "Ci4adminrbac\\": "src"
-        }
-    },
-    "require-dev": {
-        "codeigniter4/framework": "^4.0",
-        "agungsugiarto/boilerplate": "^1.0",
-        "samsonasik/ci4-album": "^1.8"
+  "name": "skuadron45/ci4adminrbac",
+  "description": "Codeigniter 4 Admin module With Basic RBAC",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "skuadron45",
+      "email": "zahidalharis@gmail.com"
     }
+  ],
+  "require": {
+    "php": ">=7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ci4adminrbac\\": "src"
+    }
+  },
+  "require-dev": {
+    "codeigniter4/codeigniter4": "dev-develop",
+    "agungsugiarto/boilerplate": "^1.0",
+    "samsonasik/ci4-album": "^1.8",
+    "codeigniter4/codeigniter4-standard": "^1.0"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/codeigniter4/codeigniter4"
+    }
+  ]
 }
