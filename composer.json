@@ -1,0 +1,16 @@
+{
+    "name": "skuadron45/ci4adminrbac",
+    "description": "Codeigniter 4 Admin module With Basic RBAC",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "skuadron45",
+            "email": "zahidalharis@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        
+    }
+}
