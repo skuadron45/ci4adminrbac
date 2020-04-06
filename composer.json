@@ -3,13 +3,14 @@
     "description": "Codeigniter 4 Admin module With Basic RBAC",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "skuadron45",
             "email": "zahidalharis@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=7.2"
     },
@@ -19,6 +20,8 @@
         }
     },
     "require-dev": {
-        "codeigniter4/framework": "dev-master"
+        "codeigniter4/framework": "^4.0",
+        "agungsugiarto/boilerplate": "^1.0",
+        "samsonasik/ci4-album": "^1.8"
     }
 }
