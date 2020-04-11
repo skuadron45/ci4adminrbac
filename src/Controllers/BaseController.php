@@ -47,28 +47,5 @@ class BaseController extends Controller
 		return $this->respond($this->vars, 200);
 	}
 
-	protected function validate($rules, array $messages = []): bool
-	{
-		$this->validator = Services::validation();
-
-		if (is_string($rules)) {
-			$validation = config('Ci4adminrbac\Config\Validation');
-
-			if (!isset($validation->$rules)) {
-				throw ValidationException::forRuleNotFound($rules);
-			}
-
-			if (!$messages) {
-				$errorName = $rules . '_errors';
-				$messages  = $validation->$errorName ?? [];
-			}
-
-			$rules = $validation->$rules;
-		}
-
-		return $this->validator
-			->withRequest($this->request)
-			->setRules($rules, $messages)
-			->run();
-	}
+	
 }

@@ -74,10 +74,10 @@ class Usergroup extends AdminController
 
             $this->adminlte->crudForm('user/usergroup/update/' . $userGroupId, 'user/usergroup');
             $this->adminlte->setContentView('user/usergroup/form');
-            parent::render();
+            return parent::render();
         } else {
             parent::setFlashMessage('warning', 'Data tidak ditemukan!');
-            redirect_admin('user/usergroup');
+            return redirect_admin('user/usergroup');
         }
     }
 

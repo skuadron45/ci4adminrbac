@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700");
+
+@import "~@lgaitan/pace-progress/dist/themes/blue/pace-theme-loading-bar";
+
+/* FAW */
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
+/* FAW-END */
+
+@import "~ionicons/scss/ionicons";
+
+@import "~tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4-build";
+
+/* SELECT2 */
+@import "~select2/src/scss/core";
+
+/* SELECT2 - Bootstrap */
+@import "~select2-bootstrap-theme/dist/select2-bootstrap";
+
+@import "~icheck-bootstrap/icheck-bootstrap.min";
+
+@import "~@sweetalert2/theme-bootstrap-4/bootstrap-4";
+
+@import "~toastr/toastr";
+
+/* Datatable */
+@import "~datatables.net-bs4/css/dataTables.bootstrap4";
+
+/* Datatable-Scroller */
+@import "~datatables.net-scroller-bs4/css/scroller.bootstrap4";
+
+@import "~admin-lte/build/scss/AdminLTE";
+
+@import "~overlayscrollbars/css/OverlayScrollbars";
+
+/* CUSTOM */
+@import "../custom/css/custom";

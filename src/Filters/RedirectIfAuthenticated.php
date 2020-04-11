@@ -7,14 +7,14 @@ use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 use Ci4adminrbac\Config\Services;
 
-class AdminNotLogin implements FilterInterface
+class RedirectIfAuthenticated implements FilterInterface
 {
     public function before(RequestInterface $request)
     {
         $auth = Services::auth();
         $hasLogin = $auth->hasLogin();
-        if (!$hasLogin) {
-            return redirect()->to(site_url('login'));
+        if ($hasLogin) {
+            return redirect()->to(site_url($auth->getSuccessUrl()));
         }
     }
 

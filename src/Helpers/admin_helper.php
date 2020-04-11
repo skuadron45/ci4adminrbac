@@ -6,7 +6,7 @@ function get_admin_base($url = "")
 
 function get_admin_view($url = "")
 {
-	return get_admin_base('Views\\admin\\'.$url);
+	return get_admin_base('Views\\admin\\' . $url);
 }
 
 function populateDsDropdown($records, $valueField, $labelField)
@@ -45,6 +45,6 @@ function print_admin_site_url($url = "")
 function redirect_admin($url = "")
 {
 	if (isset($url)) {
-		redirect()->to(admin_site_url($url));
+		return redirect()->to(admin_site_url($url));
 	}
 }
