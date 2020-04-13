@@ -38,7 +38,7 @@ class Auth
 		if (isset($user)) {
 			$userPassword = $user['password'];
 			$passwordDecrypt = $password;
-			$encrypter = Services::encrypter();
+			$encrypter = Services::encrypter(null, true);
 			try {
 				$passwordDecrypt = $encrypter->decrypt(base64_decode($userPassword));
 				if ($password === $passwordDecrypt) {

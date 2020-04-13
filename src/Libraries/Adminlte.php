@@ -2,7 +2,7 @@
 
 namespace Ci4adminrbac\Libraries;
 
-use Config\Services;
+use Ci4adminrbac\Config\Services;
 
 class Adminlte
 {

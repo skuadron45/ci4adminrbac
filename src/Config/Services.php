@@ -2,11 +2,11 @@
 
 namespace Ci4adminrbac\Config;
 
-use CodeIgniter\Config\BaseService;
+use Config\Services as BaseServices;
 
 use Ci4adminrbac\Libraries\Auth;
 
-class Services extends BaseService
+class Services extends BaseServices
 {
 
 	public static function auth($getShared = true)

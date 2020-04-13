@@ -15,7 +15,7 @@ use Ci4adminrbac\Models\MHelper;
 use Ci4adminrbac\Models\MModule;
 use Ci4adminrbac\Models\MPrivilege;
 
-use Config\Services;
+use Ci4adminrbac\Config\Services;
 
 class AdminController extends BaseController
 {
