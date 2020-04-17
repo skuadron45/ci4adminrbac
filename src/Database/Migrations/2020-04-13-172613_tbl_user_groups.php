@@ -8,22 +8,18 @@ class TblUserGroups extends Migration
 {
 	public function up()
 	{
-		$id = [
+		$fields = [
 			'id' => [
 				'type' => 'BIGINT',
 				'unsigned' => true,
-				'auto_increment' => true
-			]
-		];
-		$this->forge->addField($id);
-
-		$group_name = [
+				'auto_increment' => true,
+			],
 			'group_name' => [
 				'type' => 'VARCHAR',
 				'constraint' => 255,
 			]
 		];
-		$this->forge->addField($group_name);
+		$this->forge->addField($fields);
 
 		$this->forge->addField("created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP");
 		$this->forge->addField("updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
@@ -37,7 +33,7 @@ class TblUserGroups extends Migration
 
 		$this->forge->addPrimaryKey('id');
 		$this->forge->addUniqueKey('group_name');
-		$this->forge->createTable('tbl_user_groups',true);
+		$this->forge->createTable('tbl_user_groups', true);
 	}
 
 	//--------------------------------------------------------------------

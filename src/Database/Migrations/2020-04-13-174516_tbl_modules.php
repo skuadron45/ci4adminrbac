@@ -8,14 +8,15 @@ class TblModules extends Migration
 {
 	public function up()
 	{
-		$id = [
+		$fields = [
 			'id' => [
 				'type' => 'BIGINT',
 				'unsigned' => true,
 				'auto_increment' => true
 			]
 		];
-		$this->forge->addField($id);
+		$this->forge->addField($fields);
+		
 		$this->forge->addField("module_name VARCHAR(255) NOT NULL");
 		$this->forge->addField("module_description VARCHAR(255) NULL DEFAULT NULL");
 		$this->forge->addField("module_url VARCHAR(255) NULL DEFAULT NULL");

@@ -8,32 +8,24 @@ class TblUserPrivileges extends Migration
 {
 	public function up()
 	{
-		$id = [
+		$fields = [
 			'id' => [
 				'type' => 'BIGINT',
 				'unsigned' => true,
 				'auto_increment' => true
-			]
-		];
-		$this->forge->addField($id);
-
-		$user_group_id = [
+			],
 			'user_group_id' => [
 				'type' => 'BIGINT',
 				'null' => true,
 				'default' => 1
-			]
-		];
-		$this->forge->addField($user_group_id);
-
-		$module_id = [
+			],
 			'module_id' => [
 				'type' => 'BIGINT',
 				'null' => true,
 				'default' => 4
 			]
 		];
-		$this->forge->addField($module_id);
+		$this->forge->addField($fields);
 
 		$this->forge->addField("can_add TINYINT(4) NULL DEFAULT '1'");
 		$this->forge->addField("can_edit TINYINT(4) NULL DEFAULT '1'");
@@ -49,9 +41,7 @@ class TblUserPrivileges extends Migration
 		$this->forge->addField("is_deleted TINYINT(4) NULL DEFAULT NULL");
 
 		$this->forge->addPrimaryKey('id');
-		$this->forge->addUniqueKey('user_group_id');
-		$this->forge->addUniqueKey('module_id');
-
+		$this->forge->addUniqueKey(['user_group_id', 'module_id']);
 		$this->forge->createTable('tbl_user_privileges', true);
 	}
 

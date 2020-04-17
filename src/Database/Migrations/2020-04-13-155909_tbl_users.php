@@ -8,37 +8,28 @@ class TblUsers extends Migration
 {
 	public function up()
 	{
-		$id = [
+		$fields = [
 			'id' => [
 				'type' => 'BIGINT',
 				'unsigned' => true,
 				'auto_increment' => true
-			]
-		];
-		$this->forge->addField($id);
-
-		$username = [
+			],
 			'username' => [
 				'type' => 'VARCHAR',
 				'constraint' => 100,
-			]
-		];
-
-		$this->forge->addField($username);
-		$this->forge->addField("password TEXT NOT NULL");
-		$this->forge->addField("fullname VARCHAR(100) NULL DEFAULT NULL");
-		$this->forge->addField("email VARCHAR(100) NULL DEFAULT NULL");
-		$this->forge->addField("url VARCHAR(100) NULL DEFAULT NULL");
-
-		$user_group_id = [
+			],
 			'user_group_id' => [
 				'type' => 'BIGINT',
 				'null' => true,
 				'default' => 1
 			]
 		];
+		$this->forge->addField($fields);
 
-		$this->forge->addField($user_group_id);
+		$this->forge->addField("password TEXT NOT NULL");
+		$this->forge->addField("fullname VARCHAR(100) NULL DEFAULT NULL");
+		$this->forge->addField("email VARCHAR(100) NULL DEFAULT NULL");
+		$this->forge->addField("url VARCHAR(100) NULL DEFAULT NULL");
 		$this->forge->addField("type TINYINT(4) NULL DEFAULT '1' COMMENT '-1 (super), 1 (admin)'");
 		$this->forge->addField("biography TEXT NULL");
 		$this->forge->addField("forgot_password_key VARCHAR(100) NULL DEFAULT NULL");

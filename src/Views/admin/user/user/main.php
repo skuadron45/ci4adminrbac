@@ -76,7 +76,8 @@ $userGroupsDs = isset($userGroupsDs) ? $userGroupsDs : json_encode([]);
     label: 'Password',
     name: 'password',
     type: 'password',
-    required: true
+    placeholderEdit: 'Kosongkan bila tidak ingin diubah!',
+    required: true,
   }, {
     label: 'Grup Pengguna',
     name: 'user_group',

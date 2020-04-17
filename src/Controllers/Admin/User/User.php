@@ -88,10 +88,10 @@ class User extends AdminController
             $status = 'error';
             $message = 'Data gagal tersimpan!';
             if ($postData = $this->request->getPost(null)) {
-                if ($this->validation()) {
-                    $id = $this->request->getPost('id');
+                $id = $this->request->getPost('id');
+                if ($this->validation($id)) {
                     $userId = $this->auth->getUserData('id');
-                    $fillData = $this->fillData();
+                    $fillData = $this->fillData($id);
                     try {
                         $mHelper->updateOrInsert($id, 'tbl_users', $fillData, $userId);
                         $status = 'success';
@@ -110,19 +110,23 @@ class User extends AdminController
             return $this->failUnauthorized($message);
         }
     }
-    private function fillData()
+    private function fillData($id)
     {
         $postData = $this->request->getPost(null);
         $fillData = array(
             'username' => $postData['username'],
             'fullname' => $postData['fullname'],
             'user_group_id' => ($postData['user_group']) > 0 ? $postData['user_group'] : 1,
-            'password' => $this->auth->encrptPassword($postData['password'])
         );
+
+        if (!isParamId($id)) {
+            $fillData['password'] = $this->auth->encrptPassword($postData['password']);
+        }
+
         return $fillData;
     }
 
-    private function validation()
+    private function validation($id)
     {
         $rules = [
             'username' => [
@@ -133,15 +137,18 @@ class User extends AdminController
                 'label'  => 'Nama Lengkap',
                 'rules'  => 'required'
             ],
-            'password' => [
-                'label'  => 'Password',
-                'rules'  => 'required'
-            ],
             'user_group' => [
                 'label'  => 'Grup Pengguna',
                 'rules'  => 'required'
             ],
         ];
+
+        if (!isParamId($id)) {
+            $rules['password'] = [
+                'label'  => 'Password',
+                'rules'  => 'required'
+            ];
+        }
         return $this->validate($rules);
     }
 }

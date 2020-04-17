@@ -95,7 +95,7 @@ class Auth
 
 	public function encrptPassword($password)
 	{
-		$encrypter = Services::encrypter();
+		$encrypter = Services::encrypter(null, true);
 		return base64_encode($encrypter->encrypt($password));
 	}
 
