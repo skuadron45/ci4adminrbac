@@ -1,11 +1,13 @@
 # CodeIgniter 4 Simple RBAC Module
+[![Latest Stable Version](https://poser.pugx.org/skuadron45/ci4adminrbac/v/stable)](https://packagist.org/packages/skuadron45/ci4adminrbac) 
+[![Total Downloads](https://poser.pugx.org/skuadron45/ci4adminrbac/downloads)](https://packagist.org/packages/skuadron45/ci4adminrbac) 
+[![alt](https://img.shields.io/badge/package-skuadron45%2Fci4adminrbac%20-s)](https://packagist.org/packages/skuadron45/ci4adminrbac)
+[![License](https://poser.pugx.org/skuadron45/ci4adminrbac/license)](https://packagist.org/packages/skuadron45/ci4adminrbac) 
 
 ## Persiapan
-
 Pastikan **codeigniter4/appstarter**  project siap digunakan, baca tutorial install [disini](https://github.com/codeigniter4/appstarter)
 
 ## Instalasi module via composer
-
 Buka CMD/Shell di root project, run command berikut:
 ```
 composer require skuadron45/ci4adminrbac
