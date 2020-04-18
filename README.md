@@ -4,36 +4,37 @@
 [![alt](https://img.shields.io/badge/package-skuadron45%2Fci4adminrbac%20-s)](https://packagist.org/packages/skuadron45/ci4adminrbac)
 [![License](https://poser.pugx.org/skuadron45/ci4adminrbac/license)](https://packagist.org/packages/skuadron45/ci4adminrbac) 
 
-# Fitur Tersedia
-1. Implementasi Filters terkait Autentikasi
-2. View Parser, View Renderer
-3. ResponseTrait
-4. Library Datatable Server Side.
-5. Datatable Builder di file custom js.
-6. Form Builder untuk modal.
-7. Login User (Encrypt dan Decrypt)
-8. Add, Edit By Reload Page
-9. Add, Edit, Delete By Ajax Modal
-10. Hak Akses Add, Delete, Edit, View tiap modul. (Grup Pengguna)
-11. Template AdminLte3, Sweet Alert, Pace Js untuk loading bar.
-12. Model yang ada masih menggunakan cara CI3 (belum extend CodeIgniter\Model)
-13. CSRF Filter
-14. Mengakali Dynamic BASE URL seperti CI3 di Config/App.php
-15. Redirect Success Url/Home Modul tiap User setelah Login.
-16. Stored Procedure di database
-17. Function di database.
+# Fitur yang digunakan/tersedia
+- Implementasi Filters terkait Autentikasi
+- View Parser, View Renderer
+- ResponseTrait
+- Library Datatable Server Side.
+- Datatable Builder di file custom js.
+- Form Builder untuk modal.
+- Login User (Encrypt dan Decrypt)
+- Add, Edit By Reload Page
+- Add, Edit, Delete By Ajax Modal
+- Hak Akses Add, Delete, Edit, View tiap modul. (Grup Pengguna)
+- Template AdminLte3, Sweet Alert, Pace Js untuk loading bar.
+- Model yang ada masih menggunakan cara CI3 (belum extend CodeIgniter\Model)
+- Mengakali Dynamic BASE URL seperti CI3 di Config/App.php
+- Redirect Success Url/Home Modul tiap User setelah Login.
+- Stored Procedure di database
+- Function di database.
 
 ## Update 07-03-2020 !
-18. Compiling Assets (Mix) menggunakan Laravel Mix, (1 js dan 1 css untuk template adminlte)
-19. Ubah request login menggunakan ajax
+- Compiling Assets (Mix) menggunakan Laravel Mix, (1 js dan 1 css untuk template adminlte)
+- Ubah request login menggunakan ajax
 
+## Update 19-04-2020 !
+- Penggunaan Migration
+- Penggunaan Seeder
+- Promote modul Install Command via php spark
+- Isolated modul (tidak terikat folder app codeigniter 4)
+  
 ## Next Update
-1. Penggunaan Database Migration
-2. Penggunaan Model dan Entity
-3. Module Profil Pengguna
-4. HMVC module agar memaksimalkan namespaces
-5. ...
-
+- Penggunaan Model dan Entity
+- Module Profil Pengguna
 
 ## Persiapan
 Pastikan **codeigniter4/appstarter**  project siap digunakan, baca tutorial install [disini](https://github.com/codeigniter4/appstarter)
