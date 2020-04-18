@@ -10,6 +10,8 @@ phpunit
 # Composer
 #-------------------------
 vendor/
+!resources/**/vendor/
+
 composer.lock
 package-lock.json
 
