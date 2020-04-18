@@ -21,8 +21,6 @@
   },
   "require-dev": {
     "codeigniter4/codeigniter4": "dev-develop",
-    "agungsugiarto/boilerplate": "^1.0",
-    "samsonasik/ci4-album": "^1.8",
     "codeigniter4/codeigniter4-standard": "^1.0"
   },
   "repositories": [
