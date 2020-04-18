@@ -7,13 +7,20 @@
 ## Persiapan
 Pastikan **codeigniter4/appstarter**  project siap digunakan, baca tutorial install [disini](https://github.com/codeigniter4/appstarter)
 
+Pastikan tidak ada masalah dengan settingan App yang ada. Seperti Base Url, Database yang digunakan, baca tutorial [disini](https://codeigniter.com/user_guide/index.html),
+
+Sesuaikan nama database yang akan digunakan di App/Config/Database.php atau .env file
+
+*buat database baru bila database belum ada
+
 ## Instalasi module via composer
 Buka CMD/Shell di root project, run command berikut:
 ```
 composer require skuadron45/ci4adminrbac
 ```
 
-Jalankan command:
+Jalankan command berikut untuk instalasi module (include migration, seeder, dll)
+
 ```
 php spark ci4adminrbac:install
 ```
@@ -46,7 +53,7 @@ POST    | admin/user/usergroup/update/([0-9]+)
 POST    | login
 ```
 
-## Catatan Development
+## Catatan
 Karena saat ini codeigniter4 masih update terus perbaikannya, saya menggunakan repo github **codeigniter4/CodeIgniter4** untuk core system CI4-nya.
 Hal tersebut dapat dilakukan dengan melakukan langkah berikut:
 
