@@ -8,6 +8,8 @@ class TblUserPrivileges extends Migration
 {
 	public function up()
 	{
+		$this->forge->dropTable('tbl_user_privileges', true);
+		
 		$fields = [
 			'id' => [
 				'type' => 'BIGINT',

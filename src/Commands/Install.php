@@ -7,6 +7,7 @@ use RecursiveIteratorIterator;
 
 use CodeIgniter\CLI\BaseCommand;
 use CodeIgniter\CLI\CLI;
+use Config\Database;
 
 class Install extends BaseCommand
 {
@@ -18,22 +19,33 @@ class Install extends BaseCommand
 
 	public function run(array $params)
 	{
-		CLI::write("Copying assest to public directory");
-		$this->copyResources();
+		try {
+			CLI::write("Trying install module");
 
-		CLI::write("Module have been installed");
+			//$this->copyResources();
+			$this->call("migrate", ["-all"]);
+			$this->moduleSeeder();
+
+			CLI::write("Module have been installed");
+		} catch (\Exception  $e) {
+			$this->showError($e);
+		}
+	}
+
+	private function moduleSeeder()
+	{
+		CLI::write("Run seeder module");
+		$seeder = Database::seeder();
+		$seeder->call("Ci4adminrbac\Database\Seeds\AdminSeeder");
 	}
 
 	private function copyResources()
 	{
-		try {
-			$sourcePath = realpath(__DIR__ . "/../../resources\dist");
-			$destPath = realpath(ROOTPATH . "public");
+		CLI::write("Copying assest to public directory");
+		$sourcePath = realpath(__DIR__ . "/../../resources\dist");
+		$destPath = realpath(ROOTPATH . "public");
 
-			$this->copy($sourcePath, $destPath, ["mix-manifest.json"]);
-		} catch (\Exception  $e) {
-			$this->showError($e);
-		}
+		$this->copy($sourcePath, $destPath, ["mix-manifest.json"]);
 	}
 
 	public function copy($source, $target, $skipFiles = [])

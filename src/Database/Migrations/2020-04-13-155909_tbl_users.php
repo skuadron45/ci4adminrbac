@@ -8,6 +8,8 @@ class TblUsers extends Migration
 {
 	public function up()
 	{
+		$this->forge->dropTable('tbl_users', true);
+
 		$fields = [
 			'id' => [
 				'type' => 'BIGINT',
@@ -51,8 +53,7 @@ class TblUsers extends Migration
 
 		$this->forge->addPrimaryKey('id');
 		$this->forge->addUniqueKey('username');
-		$this->forge->addKey('user_group_id');
-
+		$this->forge->addKey('user_group_id');		
 		$this->forge->createTable('tbl_users', true);
 	}
 

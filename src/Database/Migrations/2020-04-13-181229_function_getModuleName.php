@@ -8,7 +8,6 @@ class FunctionGetModuleName extends Migration
 {
 	public function up()
 	{
-
 		$query = <<<EOD
 CREATE FUNCTION getModuleName(module_id INT, separatorpath VARCHAR(50))
 RETURNS text

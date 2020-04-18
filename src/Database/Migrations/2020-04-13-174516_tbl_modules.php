@@ -8,6 +8,8 @@ class TblModules extends Migration
 {
 	public function up()
 	{
+		$this->forge->dropTable('tbl_modules', true);
+		
 		$fields = [
 			'id' => [
 				'type' => 'BIGINT',
