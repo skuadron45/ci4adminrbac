@@ -22,7 +22,7 @@ class Install extends BaseCommand
 		try {
 			CLI::write("Trying install module");
 
-			//$this->copyResources();
+			$this->copyResources();
 			$this->call("migrate", ["-all"]);
 			$this->moduleSeeder();
 
