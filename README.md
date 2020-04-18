@@ -7,11 +7,20 @@
 ## Persiapan
 Pastikan **codeigniter4/appstarter**  project siap digunakan, baca tutorial install [disini](https://github.com/codeigniter4/appstarter)
 
-Pastikan tidak ada masalah dengan settingan App yang ada. Seperti Base Url, Database yang digunakan, baca tutorial [disini](https://codeigniter.com/user_guide/index.html),
-
+Sesuaikan Base URL di App/Config/Database.php atau .env file
 Sesuaikan nama database yang akan digunakan di App/Config/Database.php atau .env file
-
 *buat database baru bila database belum ada
+
+Contoh via .env file:
+```
+app.baseURL = http://ci4fresh.test/
+
+database.default.hostname = localhost
+database.default.database = ci4fresh
+database.default.username = root
+database.default.password = 
+database.default.DBDriver = MySQLi
+```
 
 ## Instalasi module via composer
 Buka CMD/Shell di root project, run command berikut:
@@ -25,7 +34,7 @@ Jalankan command berikut untuk instalasi module (include migration, seeder, dll)
 php spark ci4adminrbac:install
 ```
 
-## Akses
+## Routes List Modul
 Untuk mengetahui url yang tersedia untuk module ini, silahkan jalankan command:
 ```
 php spark routes
@@ -54,6 +63,16 @@ POST    | login
 ```
 
 ## Catatan
+
+### **Membuat .env file**
+Buka CMD/Shell di root project, run command berikut:
+```
+cp env .env
+```
+*perintah copy file env menjadi .env file secara command line (biasanya via GUI tidak dapat membuat .env file)
+
+### **Codeigniter 4 Core System**
+
 Karena saat ini codeigniter4 masih update terus perbaikannya, saya menggunakan repo github **codeigniter4/CodeIgniter4** untuk core system CI4-nya.
 Hal tersebut dapat dilakukan dengan melakukan langkah berikut:
 
