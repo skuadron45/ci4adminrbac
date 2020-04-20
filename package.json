@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "Simple RBAC AdminLte3 + CI 4",
   "dependencies": {
+    "jquery": "3.4.1",
+    "admin-lte": "^3.0.4",
+    "ionicons": "^2.0.1",
+    "js-cookie": "^2.2.1",
+    "jstree": "^3.3.9",
+    "select2-bootstrap-theme": "0.1.0-beta.10",
+    "sweetalert2": "^9.10.12",
+    "tempusdominus-bootstrap-4": "^5.1.2",
+    "tempusdominus-core": "^5.0.3",
     "animate.css": "^3.7.2"
   },
   "scripts": {
@@ -14,23 +23,14 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
-    "admin-lte": "^3.0.2",
     "axios": "^0.19.2",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^7.0",
-    "ionicons": "^2.0.1",
-    "js-cookie": "^2.2.1",
-    "jstree": "^3.3.9",
     "laravel-mix": "^5.0.1",
     "lodash": "^4.17.13",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.26.2",
-    "sass-loader": "^8.0.2",
-    "select2-bootstrap-theme": "0.1.0-beta.10",
-    "sweetalert2": "^9.10.12",
-    "tempusdominus-bootstrap-4": "^5.1.2",
-    "tempusdominus-core": "^5.0.3",
-    "vue-template-compiler": "^2.6.11"
+    "sass-loader": "^8.0.2"
   },
   "keywords": [
     "CI4",
