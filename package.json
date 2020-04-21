@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "description": "Simple RBAC AdminLte3 + CI 4",
   "dependencies": {
+    "bootstrap": "4.3.1",
     "jquery": "3.4.1",
-    "admin-lte": "^3.0.4",
+    "admin-lte": "3.0.4",
+    "animate.css": "^3.7.2",
     "ionicons": "^2.0.1",
     "js-cookie": "^2.2.1",
     "jstree": "^3.3.9",
     "select2-bootstrap-theme": "0.1.0-beta.10",
     "sweetalert2": "^9.10.12",
     "tempusdominus-bootstrap-4": "^5.1.2",
-    "tempusdominus-core": "^5.0.3",
-    "animate.css": "^3.7.2"
+    "tempusdominus-core": "^5.0.3"
   },
   "scripts": {
     "dev": "npm run development",
