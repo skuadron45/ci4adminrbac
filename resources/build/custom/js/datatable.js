@@ -324,11 +324,9 @@ function ModalFormBuilder(name, options) {
     }
     $("#modal-form-fields").html(html);
 
-    $(document)
-      .find(".select2:enabled")
-      .select2({
-        theme: "bootstrap",
-      });
+    $(document).find(".select2:enabled").select2({
+        theme: "bootstrap4"
+    });
 
     $("#main-modal").modal({
       backdrop: "static",

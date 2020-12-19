@@ -9,7 +9,7 @@ use Ci4adminrbac\Config\Services;
 
 class RedirectIfAuthenticated implements FilterInterface
 {
-    public function before(RequestInterface $request)
+    public function before(RequestInterface $request, $arguments = null)
     {
         $auth = Services::auth();
         $hasLogin = $auth->hasLogin();
@@ -18,7 +18,7 @@ class RedirectIfAuthenticated implements FilterInterface
         }
     }
 
-    public function after(RequestInterface $request, ResponseInterface $response)
+    public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
     }
 }

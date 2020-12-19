@@ -42,7 +42,7 @@ class Install extends BaseCommand
 	private function copyResources()
 	{
 		CLI::write("Copying assest to public directory");
-		$sourcePath = realpath(__DIR__ . "/../../resources\dist");
+		$sourcePath = realpath(__DIR__ . "/../../resources/dist");
 		$destPath = realpath(ROOTPATH . "public");
 
 		$this->copy($sourcePath, $destPath, ["mix-manifest.json"]);

@@ -10,7 +10,7 @@ class Adminlte
 
 	private $baseView = 'blankpage';
 
-	private $renderDebug = true;
+	private $renderDebug = false;
 
 	private $selectedModule = -1;
 
@@ -131,6 +131,8 @@ class Adminlte
 
 		if ($this->renderDebug) {
 			$this->vars['debugs']['vars'] = $this->vars;
+		} else {
+			$this->vars['debugs']['vars'] = [];
 		}
 
 		echo view(get_admin_view($this->baseView), $this->vars);
