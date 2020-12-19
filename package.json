@@ -2,21 +2,12 @@
   "name": "ci4adminlte",
   "version": "1.0.0",
   "description": "Simple RBAC AdminLte3 + CI 4",
-<<<<<<< HEAD
   "dependencies": {},
   "devDependencies": {
     "admin-lte": "^3.1.0-rc",
     "animate.css": "^4.1.1",
     "axios": "^0.19.2",
     "cross-env": "^7.0.3",
-=======
-  "dependencies": {
-    "bootstrap": "4.3.1",
-    "jquery": "3.5.0",
-    "admin-lte": "3.0.4",
-    "animate.css": "^3.7.2",
-    "ionicons": "^2.0.1",
->>>>>>> f2594a0ff44ce8f5cf3c132f4edf14826a4e2a9b
     "js-cookie": "^2.2.1",
     "jstree": "^3.3.11",
     "laravel-mix": "^5.0.1",
