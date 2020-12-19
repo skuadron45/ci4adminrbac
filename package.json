@@ -4,7 +4,7 @@
   "description": "Simple RBAC AdminLte3 + CI 4",
   "dependencies": {
     "bootstrap": "4.3.1",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "admin-lte": "3.0.4",
     "animate.css": "^3.7.2",
     "ionicons": "^2.0.1",
