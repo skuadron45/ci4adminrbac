@@ -8,7 +8,6 @@
 - Implementasi Filters terkait Autentikasi
 - View Parser, View Renderer
 - ResponseTrait
-- Library Datatable Server Side.
 - Datatable Builder di file custom js.
 - Form Builder untuk modal.
 - Login User (Encrypt dan Decrypt)
@@ -21,6 +20,9 @@
 - Redirect Success Url/Home Modul tiap User setelah Login.
 - Stored Procedure di database
 - Function di database.
+
+## Update 11-07-2023 !
+- Update to work on latest codeigniter 4 and PHP 8.x
 
 ## Update 07-03-2020 !
 - Compiling Assets (Mix) menggunakan Laravel Mix, (1 js dan 1 css untuk template adminlte)
