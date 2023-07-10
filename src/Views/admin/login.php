@@ -151,7 +151,7 @@ $message = isset($message) ? $message : null;
                 Anything you want
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2014-2019 <a href="#"><?= $appName; ?></a>.</strong> All rights reserved.
+            <strong>Copyright &copy; 2020 - <?php echo date('Y') ?> <a href="#"><?= $appName; ?></a>.</strong> All rights reserved.
         </footer>
     </div>
 
