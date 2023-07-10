@@ -6,7 +6,7 @@ const resourceRootPath = "node_modules/";
 const rootPluginPath = resourceRootPath + "admin-lte/plugins/";
 
 mix.sass("resources/build/sass/app.scss", "resources/dist/assets/admin/css");
-//mix.js('resources/build/js/app.js', 'resources/dist/assets/admin/js');
+// mix.js('resources/build/js/app.js', 'resources/dist/assets/admin/js');
 
 let appJsFiles = [];
 appJsFiles.push(resourceRootPath + "js-cookie/src/js.cookie.js");
@@ -32,7 +32,11 @@ appJsFiles.push(resourceRootPath + "jstree/src/misc.js");
 appJsFiles.push(resourceRootPath + "admin-lte/dist/js/adminlte.js");
 
 appJsFiles.push(rootPluginPath + "pace-progress/pace.js");
-appJsFiles.push("resources/build/custom/js/*.js");
+// appJsFiles.push("resources/build/custom/js/*.js");
+
+appJsFiles.push("resources/build/custom/js/datatable.js");
+appJsFiles.push("resources/build/custom/js/helper.js");
+appJsFiles.push("resources/build/custom/js/server.js");
 
 mix.combine(appJsFiles, publicAssetsAdminPath + "js/app.js");
 

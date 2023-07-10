@@ -20,11 +20,14 @@
 @import "~datatables.net-bs4/css/dataTables.bootstrap4.css";
 /* dt-end */
 
-@import "~admin-lte/build/scss/AdminLTE";
+@import "~admin-lte/dist/css/adminlte.css";
 
 /* overlay */
 @import "~overlayscrollbars/css/OverlayScrollbars";
 /* overlay-end */
+
+@import "~admin-lte/plugins/toastr/toastr.css";
+@import "~admin-lte/plugins/sweetalert2/sweetalert2.css";
 
 /* custom */
 @import "../custom/css/custom";
