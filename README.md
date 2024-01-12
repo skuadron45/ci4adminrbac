@@ -21,6 +21,9 @@
 - Stored Procedure di database
 - Function di database.
 
+## Update 13-01-2024 !
+- Fix error run php spark routes
+
 ## Update 11-07-2023 !
 - Update to work on latest codeigniter 4 and PHP 8.x
 
