@@ -68,6 +68,17 @@ Jalankan command berikut untuk instalasi module (include migration, seeder, dll)
 php spark ci4adminrbac:install
 ```
 
+## Tambahkan alias Filters -> App/Config/Filters
+
+```
+public array $aliases = [
+        ...
+        
+        'redirectIfAuthenticated' => RedirectIfAuthenticated::class,
+        'redirectIfNotAuthenticated' =>  RedirectIfNotAuthenticated::class
+    ];
+```
+
 ## Routes List Modul
 Untuk mengetahui url yang tersedia untuk module ini, silahkan jalankan command:
 ```

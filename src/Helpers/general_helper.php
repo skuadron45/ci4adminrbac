@@ -1,6 +1,7 @@
 <?php
 
 use Config\App;
+use Config\Security;
 
 function print_link_resource($resource)
 {
@@ -65,6 +66,6 @@ function populateArrayWithKey($arrays = array(), $key = '')
 
 function csrf_cookie(): string
 {
-	$config = config(App::class);
-	return $config->CSRFCookieName;
+	$config = config(Security::class);
+	return $config->cookieName;
 }
